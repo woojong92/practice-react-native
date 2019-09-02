@@ -31,15 +31,15 @@ export default class ToDo extends Component {
         return (
             <View style={styles.container}>
                 <View style={styles.column}>
-                <TouchableOpacity onPress={this._toggleComplete}>
-                    <View 
-                        style={[
-                            styles.circle,
-                            isCompleted ? styles.completedCircle : styles.uncompletedCircle]}
-                    />
-                </TouchableOpacity>
+                    <TouchableOpacity onPress={this._toggleComplete}>
+                        <View 
+                            style={[
+                                styles.circle,
+                                isCompleted ? styles.completedCircle : styles.uncompletedCircle]}
+                        />
+                    </TouchableOpacity>
 
-                { isEditing ? (
+                    { isEditing ? (
                     <TextInput 
                         style={[
                             styles.text, 
@@ -53,7 +53,7 @@ export default class ToDo extends Component {
                         onBlur= {this._finishEditing}
                     />
 
-                ) : (
+                    ) : (
                     <Text 
                         style={[ 
                             styles.text, 
@@ -62,7 +62,7 @@ export default class ToDo extends Component {
                     >
                     {text}
                     </Text>
-                )}
+                    )}
                 </View>
 
 
